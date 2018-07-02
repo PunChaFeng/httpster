@@ -66,6 +66,10 @@ startDefaultServer = (port, path) ->
         root: path
       return
 
+  # add custom mime types
+  customMimes = ['err', 'log', 'res', 'wrn', 'txt', 'bat', 'diff', 'tres']
+  require('mime').define "text/plain": customMimes, true
+
   # production only
   app.configure('production', ->
     app.use express.staticCache()

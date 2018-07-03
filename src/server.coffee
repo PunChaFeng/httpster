@@ -67,7 +67,7 @@ startDefaultServer = (port, path) ->
       return
 
   # add custom mime types
-  customMimes = ['err', 'log', 'res', 'wrn', 'txt', 'bat', 'diff', 'tres', 'sh', 'src']
+  customMimes = ['err', 'log', 'res', 'wrn', 'txt', 'bat', 'diff', 'dif', 'tres', 'sh', 'src']
   require('mime').define "text/plain": customMimes, true
 
   # production only
